@@ -7,9 +7,13 @@ try:
         password="12345678",
         database="alx_book_store"
     )
-
+    
+    
     mycursor = mydb.cursor()
     # Execute SQL statements using the execute() method on the cursor
+    
+    mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+    
     mycursor.execute("""
         CREATE TABLE IF NOT EXISTS books (
             book_id INT AUTO_INCREMENT PRIMARY KEY,
