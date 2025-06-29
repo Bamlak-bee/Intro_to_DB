@@ -69,5 +69,5 @@ try:
     mycursor.close()
     mydb.close()
 
-except:
-    print("Database not created")
+except mysql.connector.Error:
+    print("COuldn't connect to database")
